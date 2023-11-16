@@ -4,11 +4,11 @@ services:
     container_name: pypiserver
     ports:
       - "5000:8080"
-    volumes:
-      - .:/code
-      - logvolume01:/var/log
-    depends_on:
-      - redis
-
-volumes:
-  logvolume01: {}
+#    volumes:
+#      - .:/code
+#      - logvolume01:/var/log
+#    depends_on:
+#      - redis
+#
+#volumes:
+#  logvolume01: {}
