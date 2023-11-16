@@ -1,0 +1,14 @@
+services:
+  pypi-server:
+    image: pypiserver/pypiserver:latest
+    container_name: pypiserver
+    ports:
+      - "5000:8080"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+    depends_on:
+      - redis
+
+volumes:
+  logvolume01: {}
